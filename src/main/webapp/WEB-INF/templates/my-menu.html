@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+</body>
+<nav th:fragment="mymenu">
+    <div>
+        <ul>
+            <li>
+                <a th:href="@{/books}">Books</a>
+            </li>
+            <li>
+                <a href="/books/add">Add books</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+</html>
