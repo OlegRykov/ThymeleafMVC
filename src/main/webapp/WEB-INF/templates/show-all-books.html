@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <nav>
+        <div th:replace="~{my-menu :: mymenu}">
+        </div>
+    </nav>
+</div>
+<div>
+    <h1>Book List</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <td>Book Name</td>
+            <td>Description</td>
+            <td>Year</td>
+        </tr>
+        </thead>
+        <tr th:each="book : ${bookList}">
+            <td th:text="${book.bookName}"></td>
+            <td th:text="${book.description}"></td>
+            <td th:text="${book.year}"></td>
+            <br>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
